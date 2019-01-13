@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../scss/body.scss'
-import CardGroup from './CardGroup';
+import 'scss/body.scss'
+import CardGroup from 'Components/CardGroup';
 
 class Body extends Component {
   render() {
