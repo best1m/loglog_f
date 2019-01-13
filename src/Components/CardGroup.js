@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Card, Icon, Image} from 'semantic-ui-react';
 
 class CardGroup extends Component {
 
@@ -18,19 +17,13 @@ class CardGroup extends Component {
         const {cards} = this.state
 
             return(
-         <Card.Group>
+         <div>
             {cards.map(card =>  
-            <Card>
-                <Image src='https://designshack.net/wp-content/uploads/16-9.jpg' />
-                <Card.Content>
-                  <Card.Header>{card.name}</Card.Header>
-                  <Card.Meta>
-                    <span>Joined in 2015</span>
-                  </Card.Meta>
-                  <Card.Description>Matthew is a musician living in Nashville.</Card.Description>
-                </Card.Content>
-            </Card> )}
-         </Card.Group>
+                <div>
+                    {card.name}
+                </div>
+            )}
+         </div>
         )
     }
 }
