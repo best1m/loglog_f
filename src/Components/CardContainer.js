@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'scss/components/cardContainer.scss';
 
 class CardContainer extends Component {
 
@@ -17,9 +18,10 @@ class CardContainer extends Component {
         const {cards} = this.state
 
             return(
-         <div>
+         <div className="ll-cardContainer">
             {cards.map(card =>  
                 <div className="ll-card">
+                <div className="ll-imageBox"></div>
                     {card.name}
                 </div>
             )}
