@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardContainer from 'components/cardContainer';
+import PostContainer from 'components/postContainer';
 import 'scss/pages/home.scss';
 
 class Home extends Component {
@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="ll-home">
           <h1>HOME</h1>
-          <CardContainer/>
+          <PostContainer/>
           
       </div>
     );
