@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CardGroup extends Component {
+class CardContainer extends Component {
 
     state = {
         cards : [
@@ -19,7 +19,7 @@ class CardGroup extends Component {
             return(
          <div>
             {cards.map(card =>  
-                <div>
+                <div className="ll-card">
                     {card.name}
                 </div>
             )}
@@ -28,4 +28,4 @@ class CardGroup extends Component {
     }
 }
 
-export default CardGroup;
+export default CardContainer;
