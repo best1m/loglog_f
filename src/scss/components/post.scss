@@ -1,0 +1,11 @@
+.ll-post {
+    float: left;
+    width: 240px;
+    height: 340px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+
+    &:nth-child(3n-1) {
+        margin: 0 20px 0 20px;
+    }
+}
