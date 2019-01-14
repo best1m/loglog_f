@@ -8,6 +8,7 @@ class Home extends Component {
       <div className="ll-home">
           <h1>HOME</h1>
           <CardContainer/>
+          
       </div>
     );
   }
