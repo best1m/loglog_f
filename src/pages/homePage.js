@@ -19,7 +19,9 @@ class Home extends Component {
     const {posts} = this.state;
     return (
       <div className="ll-home">
-      {posts.map((post, i) => <Post key={i} name={post.name} id={post.id} src={post.src}/>)}
+         <div className="ll-post-container">
+            {posts.map((post, i) => <Post key={i} name={post.name} id={post.id} src={post.src}/>)}
+         </div>
       </div>
     );
   }

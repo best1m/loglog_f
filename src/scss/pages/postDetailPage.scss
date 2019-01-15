@@ -1,13 +1,14 @@
 
 .ll-postDetail-page {
+
     width: 766px;
     margin: auto;
-    
-    height: 100%;
 
     .ll-postDetail-container {
         border : 1px solid black;
         height: 100%;
+        min-height: 766px;
+        margin-top: 50px;
 
         .ll-imageBox {
             height: 30%;
