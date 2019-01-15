@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import 'scss/app.scss';
 import { BrowserRouter as Router , Route } from 'react-router-dom';
 import Header from 'components/header';
-import Home from 'pages/home';
-import About from 'pages/about';
-import Board from 'pages/board';
-import Post from 'pages/post';
+import HomePage from 'pages/homePage';
+import AboutPage from 'pages/aboutPage';
+import BoardPage from 'pages/boardPage';
+import PostDetailPage from 'pages/postDetailPage';
 
 class App extends Component {
   render() {
@@ -14,10 +14,10 @@ class App extends Component {
         <Router>
           <div>
               <Header/>
-              <Route exact path="/" component={Home}/>
-              <Route path="/about" component={About}/>
-              <Route path="/board" component={Board}/>
-              <Route path="/post/:id" component={Post}/>
+              <Route exact path="/" component={HomePage}/>
+              <Route path="/about" component={AboutPage}/>
+              <Route path="/board" component={BoardPage}/>
+              <Route path="/post/:id" component={PostDetailPage}/>
           </div>
         </Router>
       </div>
