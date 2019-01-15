@@ -1,13 +1,20 @@
 .ll-header {
     height: 100px;
-    background-color: #262626;
+    background-color: #ffeecc;
+
+    .ll-logo {
+        float: left;
+        width: 100px;
+        margin-left: 20px;
+    }
 
     .ll-menu {
-        color: white;
-        line-height: 6;
+        line-height: 4;
 
         .ll-items {
-            color: white;
+            color: black;
+            text-decoration: none;
+            font-size: 25px;
             margin: 0 10px 0 10px;
         }
     }
