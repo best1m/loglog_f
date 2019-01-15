@@ -6,7 +6,11 @@ class Post extends Component {
   render() {
     return (
     <div className="ll-postDetail-page">
-      <h1>{this.props.match.params.id}</h1>
+      <div className="ll-postDetail-container">
+        <img className="ll-imageBox"/>
+        <div>title : {this.props.match.params.id}</div>
+        <div>contents : </div>
+      </div>
     </div>
     );
   }

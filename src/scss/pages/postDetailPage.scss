@@ -1,8 +1,22 @@
 
 .ll-postDetail-page {
+    width: 766px;
+    margin: auto;
     
-    background-color: black;
     height: 100%;
+
+    .ll-postDetail-container {
+        border : 1px solid black;
+        height: 100%;
+
+        .ll-imageBox {
+            height: 30%;
+        
+        }
+
+    }
+
+    
 
 
 }
