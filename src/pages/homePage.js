@@ -5,7 +5,7 @@ import 'scss/pages/homePage.scss';
 class Home extends Component {
 
   componentDidMount(){
-    fetch('http://localhost:4000/topic')
+    fetch('http://localhost:4000/posts')
     .then(res => res.json())
     .then(res => {
       this.setState({posts : res.data});
