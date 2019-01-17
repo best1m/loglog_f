@@ -14,14 +14,16 @@ class App extends Component {
     return (
       <div className="app">
         <Router>
-          <div>
+          <div className="ll-router-inner">
               <Header/>
-              <Route exact path="/" component={HomePage}/>
-              <Route path="/about" component={AboutPage}/>
-              <Route path="/board" component={BoardPage}/>
-              <Route path="/post/:id" component={PostDetailPage}/>
-              <Route path="/signup" component={SignUp}/>
-              <Route path="/signin" component={SignIn}/>
+              <div className="ll-body">
+                <Route exact path="/" component={HomePage}/>
+                <Route path="/about" component={AboutPage}/>
+                <Route path="/board" component={BoardPage}/>
+                <Route path="/post/:id" component={PostDetailPage}/>
+                <Route path="/signup" component={SignUp}/>
+                <Route path="/signin" component={SignIn}/>
+              </div>
           </div>
         </Router>
       </div>
