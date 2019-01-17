@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Post from 'components/post';
 import 'scss/pages/homePage.scss';
+import {Link} from 'react-router-dom';
+
 
 class Home extends Component {
 
@@ -31,6 +33,9 @@ class Home extends Component {
     const {posts} = this.state;
     return (
       <div className="ll-home">
+         <Link to="/write">
+          <button className="ll-write-button">write</button>
+         </Link>
          <div className="ll-post-container">
             {posts.map((post, i) => <Post key={i} name={post.name} id={post.id} src={post.src}/>)}
          </div>

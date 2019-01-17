@@ -8,6 +8,7 @@ import BoardPage from 'pages/boardPage';
 import PostDetailPage from 'pages/postDetailPage';
 import SignUp from 'pages/signUp';
 import SignIn from 'pages/signIn';
+import Write from 'pages/write';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
                 <Route path="/post/:id" component={PostDetailPage}/>
                 <Route path="/signup" component={SignUp}/>
                 <Route path="/signin" component={SignIn}/>
+                <Route path="/write" component={Write}/>
               </div>
           </div>
         </Router>
