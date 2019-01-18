@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import moment from 'moment';
 
 
 class Write extends Component {
@@ -15,23 +16,10 @@ class Write extends Component {
   onWrite = () => {
 
     const {username, title, content, img_url, created} = this.state;
-    var today = new Date();
-    var yyyy = today.getFullYear();
-    var mm = today.getMonth() + 1;
-    var dd = today.getDate();
-
-    if (dd < 10) {
-      dd = '0' + dd;
-    }
-
-    if (mm < 10) {
-      mm = '0' + mm;
-    }
-
-    var today = yyyy + '-' + mm + '-' + dd;
+ 
 
     this.setState({
-      created : today
+      created : moment().format()
     })
     
     axios.post('http://localhost:4000/posts/add', {
