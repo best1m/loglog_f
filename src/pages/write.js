@@ -8,25 +8,25 @@ class Write extends Component {
       username : '',
       title : '',
       content : '',
-      img_url : '',
+      image_url : '',
       created : ''
     }
     
 
   onWrite = () => {
 
-    const {username, title, content, img_url, created} = this.state;
+    const {username, title, content, image_url, created} = this.state;
  
 
     this.setState({
-      created : moment().format()
+      created : moment().format('YYYY-MM-DD')
     })
     
     axios.post('http://localhost:4000/posts/add', {
-      username : username,
       title : title,
       content : content,
-      img_url : img_url,
+      image_url : image_url,
+      username : username,
       created : created
     })
     .then(res => console.log(res))
@@ -48,7 +48,7 @@ class Write extends Component {
           USERNAME : <input type="text"name='username' onChange={this.handleChange}/>
           TITLE : <input type="text"  name='title' onChange={this.handleChange}/>
           CONTENT : <textarea rows="5" cols="20"  name='content' onChange={this.handleChange}/>
-          IMG_URL : <input type="text"  name='img_url' onChange={this.handleChange}/>
+          IMAGE_URL : <input type="text"  name='image_url' onChange={this.handleChange}/>
           <button onClick={this.onWrite}>Done</button>
       </div>
     );
