@@ -28,14 +28,18 @@ class Write extends Component {
       mm = '0' + mm;
     }
 
-    today = mm + '/' + dd + '/' + yyyy;
+    var today = yyyy + '-' + mm + '-' + dd;
+
+    this.setState({
+      created : today
+    })
     
     axios.post('http://localhost:4000/posts/add', {
       username : username,
       title : title,
       content : content,
       img_url : img_url,
-      created : today
+      created : created
     })
     .then(res => console.log(res))
     .catch(err => console.log(err));
@@ -50,14 +54,13 @@ class Write extends Component {
   }
 
   render() {
-    const {username, title, content, img_url, created} = this.state;
     return (
       <div>
           <h1>Write</h1>
-          USERNAME : <input type="text" value={username} name='username' onChange={this.handleChange}/>
-          TITLE : <input type="text" value={title} name='title' onChange={this.handleChange}/>
-          CONTENT : <textarea rows="5" cols="20" value={content} name='content' onChange={this.handleChange}/>
-          IMG_URL : <input type="text" value={img_url} name='img_url' onChange={this.handleChange}/>
+          USERNAME : <input type="text"name='username' onChange={this.handleChange}/>
+          TITLE : <input type="text"  name='title' onChange={this.handleChange}/>
+          CONTENT : <textarea rows="5" cols="20"  name='content' onChange={this.handleChange}/>
+          IMG_URL : <input type="text"  name='img_url' onChange={this.handleChange}/>
           <button onClick={this.onWrite}>Done</button>
       </div>
     );
