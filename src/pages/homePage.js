@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import Post from 'components/post';
 import 'scss/pages/homePage.scss';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
 
 class Home extends Component {
 
   componentDidMount(){
-    fetch('http://localhost:4000/posts')
-    .then(res => res.json())
-    .then(res => {
-      this.setState({posts : res.data});
-      console.log(res.data);
-    })
-    .catch(err => console.error(err))
+
+      axios.get('http://localhost:4000/posts')
+      .then(res =>  console.log(res.data))
+      .catch(err => console.log(err))
     
   }
 
