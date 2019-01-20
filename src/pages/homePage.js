@@ -29,7 +29,7 @@ class Home extends Component {
     const {posts} = this.state;
     return (
       <div className="ll-home">
-         <Link to="/write">
+         <Link to="/postCreatePage">
           <button className="ll-write-button">write</button>
          </Link>
          <div className="ll-post-container">

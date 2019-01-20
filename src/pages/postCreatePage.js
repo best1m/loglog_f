@@ -3,7 +3,7 @@ import axios from 'axios';
 import moment from 'moment';
 
 
-class Write extends Component {
+class PostCreatePage extends Component {
     state = {
       username : '',
       title : '',
@@ -55,4 +55,4 @@ class Write extends Component {
   }
 }
 
-export default Write;
+export default PostCreatePage;

@@ -12,12 +12,12 @@ class Header extends Component {
         </Link>
         <div className="ll-menu ll-left">
           <Link to="/" className="ll-items">HOME</Link>
-          <Link to="/about" className="ll-items">ABOUT</Link>
-          <Link to="/board" className="ll-items">BOARD</Link>
+          <Link to="/aboutPage" className="ll-items">ABOUT</Link>
+          <Link to="/boardPage" className="ll-items">BOARD</Link>
         </div>
         <div className="ll-menu ll-right">
-          <Link to="/signup" className="ll-items">SIGN UP</Link>
-          <Link to="/signin" className="ll-items">SIGN IN</Link>
+          <Link to="/signupPage" className="ll-items">SIGN UP</Link>
+          <Link to="/signinPage" className="ll-items">SIGN IN</Link>
         </div>
       </div>
     );

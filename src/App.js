@@ -6,9 +6,9 @@ import HomePage from 'pages/homePage';
 import AboutPage from 'pages/aboutPage';
 import BoardPage from 'pages/boardPage';
 import PostDetailPage from 'pages/postDetailPage';
-import SignUp from 'pages/signUp';
-import SignIn from 'pages/signIn';
-import Write from 'pages/write';
+import SignUpPage from 'pages/signUpPage';
+import SignInPage from 'pages/signInPage';
+import PostCreatePage from 'pages/postCreatePage';
 
 class App extends Component {
   render() {
@@ -19,12 +19,12 @@ class App extends Component {
               <Header/>
               <div className="ll-body">
                 <Route exact path="/" component={HomePage}/>
-                <Route path="/about" component={AboutPage}/>
-                <Route path="/board" component={BoardPage}/>
+                <Route path="/aboutPage" component={AboutPage}/>
+                <Route path="/boardPage" component={BoardPage}/>
                 <Route path="/post/:id" component={PostDetailPage}/>
-                <Route path="/signup" component={SignUp}/>
-                <Route path="/signin" component={SignIn}/>
-                <Route path="/write" component={Write}/>
+                <Route path="/signupPage" component={SignUpPage}/>
+                <Route path="/signinPage" component={SignInPage}/>
+                <Route path="/postCreatePage" component={PostCreatePage}/>
               </div>
           </div>
         </Router>
