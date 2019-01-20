@@ -1,36 +1,51 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import moment from 'moment';
+import { timeout } from 'q';
 
 
 class PostCreatePage extends Component {
     state = {
-      username : '',
-      title : '',
-      content : '',
-      image_url : '',
-      created : ''
+      username : null,
+      title : null,
+      content : null,
+      image_url : null,
+      created : null
+    }
+
+    setDate = () => {
+      this.setState({
+        created : moment().format('YYYY-MM-DD')
+      })
+    }
+
+    onRequestPost = async() => {
+
+      try {
+
+        await this.setDate();
+  
+      } catch (err) {
+        console.log(err)
+      }
+
+      const {username, title, content, image_url, created} = this.state;
+      axios.post('http://localhost:4000/posts/add', {
+        title : title,
+        content : content,
+        image_url : image_url,
+        username : username,
+        created : created
+      })
+      .then(res => console.log(res))
+      .catch(err => console.log(err));
     }
     
 
   onWrite = () => {
 
-    const {username, title, content, image_url, created} = this.state;
- 
+    this.onRequestPost();
 
-    this.setState({
-      created : moment().format('YYYY-MM-DD')
-    })
-    
-    axios.post('http://localhost:4000/posts/add', {
-      title : title,
-      content : content,
-      image_url : image_url,
-      username : username,
-      created : created
-    })
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
     console.log(this.state);
 
   }
