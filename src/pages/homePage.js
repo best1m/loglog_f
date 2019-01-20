@@ -33,7 +33,7 @@ class Home extends Component {
           <button className="ll-write-button">write</button>
          </Link>
          <div className="ll-post-container">
-            {posts.map((post, i) => <Post key={i} title={post.title} content={post.content} src={post.image_url}/>)}
+            {posts.map((post, i) => <Post key={i} username={post.username} title={post.title} content={post.content} src={post.image_url} created={post.created}/>)}
          </div>
       </div>
     );
