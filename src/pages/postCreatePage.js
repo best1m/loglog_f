@@ -6,11 +6,11 @@ import { timeout } from 'q';
 
 class PostCreatePage extends Component {
     state = {
-      username : null,
-      title : null,
-      content : null,
-      image_url : null,
-      created : null
+      username : '',
+      title : '',
+      content : '',
+      image_url : '',
+      created : ''
     }
 
     setDate = () => {
@@ -40,15 +40,6 @@ class PostCreatePage extends Component {
       .then(res => console.log(res))
       .catch(err => console.log(err));
     }
-    
-
-  onWrite = () => {
-
-    this.onRequestPost();
-
-    console.log(this.state);
-
-  }
 
   handleChange = (event) => {
     this.setState({
@@ -64,7 +55,7 @@ class PostCreatePage extends Component {
           TITLE : <input type="text"  name='title' onChange={this.handleChange}/>
           CONTENT : <textarea rows="5" cols="20"  name='content' onChange={this.handleChange}/>
           IMAGE_URL : <input type="text"  name='image_url' onChange={this.handleChange}/>
-          <button onClick={this.onWrite}>Done</button>
+          <button onClick={this.onRequestPost}>Done</button>
       </div>
     );
   }
