@@ -8,7 +8,7 @@ import BoardPage from 'pages/boardPage';
 import PostDetailPage from 'pages/postDetailPage';
 import SignUpPage from 'pages/signUpPage';
 import SignInPage from 'pages/signInPage';
-import PostCreatePage from 'pages/postCreatePage';
+import CreatePostPage from 'pages/createPostPage';
 
 class App extends Component {
   render() {
@@ -24,7 +24,7 @@ class App extends Component {
                 <Route path="/post/:id" component={PostDetailPage}/>
                 <Route path="/signupPage" component={SignUpPage}/>
                 <Route path="/signinPage" component={SignInPage}/>
-                <Route path="/postCreatePage" component={PostCreatePage}/>
+                <Route path="/createPostPage" component={CreatePostPage}/>
               </div>
           </div>
         </Router>

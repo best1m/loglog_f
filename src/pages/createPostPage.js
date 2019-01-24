@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import moment from 'moment';
-import { timeout } from 'q';
 
 
-class PostCreatePage extends Component {
+class CreatePostPage extends Component {
     state = {
       username : '',
       title : '',
@@ -61,4 +60,4 @@ class PostCreatePage extends Component {
   }
 }
 
-export default PostCreatePage;
+export default CreatePostPage;
